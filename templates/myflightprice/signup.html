@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <img class="wave" src="/static/image/side1.png">
+	<div class="container1">
+		<div class="img">
+
+			<img class="img1" src="/static/image/things_to_say.svg">
+	  </div>
+  </div>
+		<div class="login-content">
+
+    <div class="container">
+
+    <div class="login-div">
+      <div class="logo" style="border: 2px solid #0ef506"></div>
+      <div class="title"> Sign Up </div>
+      {% if submitted %}
+       Your account is created
+
+      {% else %}
+
+
+
+      <form action="signup" method="POST" name="myform">
+
+        {% csrf_token %}
+
+        <label>
+          <input type="text" name="name" placeholder="Enter Your Name "/>
+        </label>
+        <label>
+          <input type="text" name="email" placeholder="Enter Your Email Address "/>
+        </label>
+        <label>
+          <span class="eye" onclick="myfunc()">
+            <i id="hide1" class="fa fa-eye"></i>
+            <i id="hide2" class="fa fa-eye-slash"></i>
+          </span>
+          <input type="password"  name="password1" placeholder="Enter Your Password" id="myinput" />
+        </label>
+        <label>
+          <span class="eye" onclick="myfunc1()">
+            <i id="hide11" class="fa fa-eye"></i>
+            <i id="hide22" class="fa fa-eye-slash"></i>
+          </span>
+          <input type="password"  name="password2" placeholder="Enter Your Password Again" id="myinput1" />
+        </label>
+        <button class="red" type="submit" name="submit">
+            <i class="icon fa fa-sign-in"></i>
+            Sign Up</button>
+        <div class="para">
+            <p>Already Have An Account? &nbsp;  <a href="/login" > Log In </a></p>
+          </div>
+      </form>
+      {% endif %}
+    </div>
+   </div>
+        </div>
+    <script>
+
+      function myfunc(){
+        var x = document.getElementById("myinput");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+
+        if(x.type === 'password'){
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+        }
+        else{
+          x.type = "password";
+          y.style.display = "none";
+          z.style.display = "block";
+        }
+      }
+
+      function myfunc1(){
+        var x = document.getElementById("myinput1");
+        var y = document.getElementById("hide11");
+        var z = document.getElementById("hide22");
+
+        if(x.type === 'password'){
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+        }
+        else{
+          x.type = "password";
+          y.style.display = "none";
+          z.style.display = "block";
+        }
+      }
+
+
+      </script>
+  </body>
+</html>

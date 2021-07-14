@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FLIGHT PRICE</title>
+    <link rel="stylesheet" type="text/css" href="/static/indexstyle.css" />
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- for google fonts-->
+        <!-- for awesome fonts icons -->
+     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+
+    </head>
+
+
+<body onload="myFunction()">
+    <!-- html for loading animation starts here -->
+    <div id="loading"> Loading ..... Please Wait A Second....  </div>
+
+    <!-- Offer Header starts here-->
+    <section class="header">
+       <nav>  <!--   Creating navigation links -->
+           <a href="index.html"><img id="logo" src="/static/image/logo.png" />  </a>
+           <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" id="close" onclick="hideMenu()"></i>
+               <ul>
+                   <li> <a href="">Home</i></a> </li>
+                   <li> <a href="/flight">Flights</a> </li>
+                   <li> <a href="/detail">Details</a> </li>
+                   <li> <a href="/contact">Contact</a> </li>
+                   <li> <a href="/login">LogIn</a> </li>
+               </ul>
+           </div>
+         <i class="fa fa-bars" onclick="showMenu()"></i>
+       </nav>
+
+       <div class="text-box">
+           <h1> India's Cheapest Flight Ever</h1>
+           <p> In this website, you will get the cheapest flight ticket all over India.<br>
+            If you want to travel then just try it once....</p>
+            <a href="/flight" class="hero-btn">Let's Try It Once</a>
+       </div>
+    </section>
+    <!-- header section ends here-->
+
+
+    <!-- Offer section starts here-->
+    <section class="offers">
+        <h1>Best Offers For You </h1>
+        <p> We are also doing very hardwork for providing the best of the best offers to you because our main moto is our customers satisfactions. </p>
+
+        <div class="row">
+
+            <div class="offers-col">
+                <h3>Free Food</h3>
+                <p> Every month we are giving free food facility for 10 lucky customers. In this offer, we will randomly select some of the customers of the current month.
+                    And then we will provide them a couple dinner for them in a beautiful resturant. So if you are also willing to get this amazing offer then make sure while
+                    you want to travel any where book ticket from us. </p>
+            </div>
+            <div class="offers-col">
+                <h3> Free Vacations Trip </h3>
+                <p> Every year Free Vacation Trip to 2 couples. In this offer, we will randomly select two of our customers who buys maximum ticket from our company.
+                    For the two lucky couples we will be providing two Vacation ticket of paris for 5 days. So if you are also willing to get this amazing offer then make sure while
+                    you want to travel any where book ticket from us.</p>
+            </div>
+            <div class="offers-col">
+                <h3> Discount </h3>
+                <p> For 5 lucky customers we are providing 10% discount on any route. In this offer, we will randomly select some of the customers of the current month.
+                    And then we will provide them 10% discount in any route you want to travel. So if you are also willing to get this amazing offer then make sure while
+                    you want to travel any where book ticket from us.  </p>
+            </div>
+        </div>
+    </section>
+    <!-- Offer section ends here-->
+
+    <!-- Destinations section starts here-->
+<section class="destination">
+    <h3> Our Destinations </h3>
+    <p> These are the some of the places where we used to book the ticket of airlines. </p>
+<!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="/static/image/banglore.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/static/image/cochin.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/static/image/hydrabad.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/static/image/kolkata.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+    <div class="column">
+        <img src="/static/image/newdelhi.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+      </div>
+  </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/image/banglore.jpg" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/image/cochin.jpg" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/image/hydrabad.jpg" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/image/kolkata.jpg" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/image/newdelhi.jpg" style="width:100%; height: 400px;">
+      </div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="/static/image/banglore.jpg" onclick="currentSlide(1)" alt="Banglore">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="/static/image/cochin.jpg" onclick="currentSlide(2)" alt="Cochin">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="/static/image/hydrabad.jpg" onclick="currentSlide(3)" alt="Hydrabad">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="/static/image/kolkata.jpg" onclick="currentSlide(4)" alt="Kolkata">
+      </div>
+      <div class="column">
+        <img class="demo" src="/static/image/newdelhi.jpg" onclick="currentSlide(5)" alt="New Delhi">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+    <!-- Destinations section ends here-->
+
+
+    <!-- Airlines section starts here-->
+
+    <section class="airlines">
+        <h3> Our Airlines Partners </h3>
+        <p> These are the some of the airlines which our company used to book the ticket according to your route and  interest of travelling.  </p>
+        <div class="row">
+            <div class="airlines-col">
+                <img src="/static/image/goair.png" alt="">
+                <div class="layer">
+                    <h3> Go Air </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/indigo.png" alt="">
+                <div class="layer">
+                    <h3> Indigo Airlines </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/jetairways.png" alt="">
+                <div class="layer">
+                    <h3> Jet Airways </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/spicejet.png" alt="">
+                <div class="layer">
+                    <h3> Spice Jet  </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/vistra.png" alt="">
+                <div class="layer">
+                    <h3> Vistara Airlines </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/air  india.png" alt="">
+                <div class="layer">
+                    <h3> Air  India  </h3>
+                </div>
+            </div>
+
+            <div class="airlines-col">
+                <img src="/static/image/airasia.png" alt="">
+                <div class="layer">
+                    <h3> Air Asia  </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Airlines section ends here-->
+
+
+<!-- Services section Starts here-->
+ <section class="services">
+   <h3> Our Services </h3>
+   <p> Our Company is working day and night to offer you more and more services, and best of the best offers.</p>
+
+   <div class="row">
+       <div class="services-col">
+           <img src="/static/image/bookingticket.png" alt="bookingticket">
+           <h3> Booking Ticket</h3>
+           <p> You can directly book the ticket for airlines in which you want to travel.</p>
+       </div>
+
+       <div class="services-col">
+        <img src="/static/image/viewgraph.png" alt="viewgraph">
+        <h3> See Price Graph</h3>
+        <p> You can look the price history of airlines in which you want to travel.</p>
+    </div>
+
+    <div class="services-col">
+        <img src="/static/image/directpayment.png" alt="directpayment">
+        <h3> Direct Payment</h3>
+        <p> You can directly pay the amount of the ticket for airlines in which you want to travel.</p>
+    </div>
+
+   </div>
+ </section>
+ <!-- Services section Starts here-->
+
+<!-- payment method section starts here-->
+<section class="payment">
+
+        <h3> Our Payment Methods </h3>
+        <p> We have integrated many banks so that you can trasfer money directly from bank account to our account.  </p>
+        <div class="row">
+
+            <div class="payment-col">
+                <img src="/static/image/mastercard.png" alt="">
+                <div class="layer">
+                    <h3> Master Card </h3>
+                </div>
+            </div>
+
+            <div class="payment-col">
+                <img src="/static/image/visa.jpg" alt="">
+                <div class="layer">
+                    <h3> visa </h3>
+                </div>
+            </div>
+
+        </div>
+</section>
+
+<!-- payment method section ends here-->
+
+<!-- Comments and reviews section Starts here-->
+<section class="comments">
+    <h3> What Our Customers Says</h3>
+    <p> Here you will see what our regular customer says about our company and what rating they want to give to us.</p>
+
+    <div class="row">
+        <div class="comment-col">
+            <img src="/static/image/personimg1.jpg">
+            <div>
+                <p> They are just great. The airlines tickets are so much cheap compared to other cheap ticket providers.  </p>
+                <h2> Richa Sahi </h2>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+
+        <div class="comment-col">
+            <img src="/static/image/personimg2.jpg">
+            <div>
+                <p> Their offers are the best as well as their ticket price is also reasonable. </p>
+                <h2> Rahul Sharma </h2>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+
+        <div class="comment-col">
+            <img src="/static/image/personimg3.jpg">
+            <div>
+                <p> They are just great. The services, facilities they provide to us is superb no any complaints. </p>
+                <h2> Riya Gha </h2>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+
+        <div class="comment-col">
+            <img src="/static/image/personimg4.jpg">
+            <div>
+                <p> I think the best and cheapest airlines  ticket provider is them with amazing offers time to time. And I have won 2 offers till now I hope I can win more.</p>
+                <h2>  Priya Roy </h2>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+ <!-- Comments and reviews section ends here-->
+
+ <!-- Our Executive Persons starts here-->
+
+ <section class="executives">
+    <h3> Our Executives </h3>
+    <p> We are working 24 X 7 to provide you better services and facilities. </p>
+
+
+                <!-- flip effect on image 6 -->
+             <!--   <div class="executive-col">
+                    <div class="element1 effect6">
+                        <div class="front6">
+                        <img src="/static/image/avatar2.png" style="height:100%; width:100%;"/>
+                        </div>
+                        <div class="back6">
+                        <div class="back-content">
+                        <h2>Co-Founder </h2>
+                        <p> My Flight Search </p>
+                        </div>
+
+                        </div>
+                    </div>  -->
+
+
+
+
+                  <div class="element2 effect6">
+                        <div class="front6">
+                        <img src="/static/image/executives.jpg" style="height:100%; width:100%;"/>
+                        </div>
+                        <div class="back6">
+                        <div class="back-content">
+                        <h2> CEO. Dipesh Adhikari  </h2>
+                        <p> My Flight Search </p>
+                        </div>
+
+                        </div>
+                    </div>
+
+                 <!--   <div class="element3 effect6">
+                        <div class="front6">
+                        <img src="/static/image/avatar2.png" style="height:100%; width:100%;"/>
+                        </div>
+                        <div class="back6">
+                        <div class="back-content">
+                            <h2> Co-Founder  </h2>
+                            <p> My Flight Search </p>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>  -->
+
+
+</section>
+
+ <!-- Our Executive Persons ends here-->
+
+ <!-- Call to action section starts here-->
+<section class="cta">
+    <h1>Book Airlines Tickets <br> Anywhere From The India </h1>
+    <a href="/contact" class="hero-btn"> Contact Us </a>
+</section>
+
+ <!-- Call to action section ends here-->
+
+
+<!-- try your luck section starts here  -->
+
+
+
+
+
+
+
+<!-- try your luck section ends here  -->
+<!-- Footer starts here -->
+<section class="footer">
+     <div class="container">
+    <div class="luck">
+        <h3> Try Your Luck </h3>
+        <p> If you still think that you can find more cheap flight price then ours then you can try your self.<br>
+            Try your luck if you are unsatisfied with our flight ticket, service and facility.<br>
+            You can check out in any other website. And all the best for your unnecessary hardwork. </p>
+        <input class="luck" plackholder="Try Your Luck">
+    </div>
+    </div>
+
+    <h3>About Us </h3>
+    <p>
+        We have done detail reached on the transportation system,  what we found is many people<br>
+        are travelling paying huge money without knowing for airlines. So to provide them airlines
+        ticket <br>in as much as low possible. We have design or developed this website with superb offers time to time.
+    </p>
+    <div class="icons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <p>Made With<i class="fa fa-heart-o"></i> by MY FLIGHT PRICE</p>
+</section>
+
+
+<!-- footer ends here -->
+    <script type="text/javascript" src="/static/javascript.js">
+    </script>
+</body>
+</html>

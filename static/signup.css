@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+
+  }
+
+  .wave{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+
+  }
+
+  .container1{
+      width: 100vw-3vh;
+      height: 580px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap :7rem;
+      padding: 0 2rem;
+  }
+
+  .img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .login-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img img{
+    width: 500px;
+  }
+
+  .container{
+    margin: 0;
+    float: right;
+    width: 450px;
+    height: 570px;
+    overflow:hidden;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background: #0ef506;  /* change this to white  #ecf0f3  */
+    outline: none;
+    outline-offset: none;
+    padding: 60px 35px 35px 35px;
+    border-radius: 10px;
+    box-shadow: 13px 13px 20px #ec3204, -13px -13px 20px #e64404;
+    margin-top: -550px;
+    margin-right: 150px;
+
+  }
+
+  .login-div {
+    background: #0ef506;
+  }
+
+  .logo {
+    background:url("/static/image/avatar4.svg");
+    background-size: cover;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    margin:0 auto;
+    margin-top: 0px;
+    box-shadow:
+    /* logo shadow */
+    0px 0px 2px #5f5f5f,
+    /* offset */
+    0px 0px 0px 5px #ecf0f3,
+    /*bottom right */
+    8px 8px 15px #a7aaaf,
+    /* top left */
+    -8px -8px 15px #ffffff
+    ;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: 0.5px;
+    color: #ec3204;
+  }
+
+  .sub-title {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    letter-spacing: 3px;
+  }
+
+  form {
+    padding: 16px;
+    width: 320px;
+    margin: 0 auto;
+    height: 450px;
+
+  }
+
+  .segment {
+    padding: 32px 0;
+    text-align: center;
+    color: #0ef506;
+  }
+
+  button, input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+    color: #0ef506;
+  }
+
+  input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    color: #0ef506;
+  }
+
+  input:focus {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+
+  button {
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  button:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  }
+
+  button:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+
+  button .icon {
+    margin-right: 8px;
+  }
+
+  button.unit {
+    border-radius: 8px;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+  }
+
+  button.unit .icon {
+    margin-right: 0;
+  }
+
+  button.red {
+    display: block;
+    width: 100%;
+    color: #0ef506;
+    height: 60px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .input-group label {
+    margin: 0;
+    flex: 1;
+  }
+
+  .fa{
+    margin: 10px;
+      font-size: 15px;
+  }
+
+  .eye{
+    position: absolute;
+      margin-left: 250px;
+      margin-top: 10px;
+  }
+
+  #hide1{
+    display: none;
+  }
+
+  .para{
+  color: #ec3204;
+  margin-top: 10px;
+  }
+
+  .para a{
+  color: #ec3204;
+  }
+  ::placeholder{
+    color:#ec3204;
+  }
+
+
+
+## Code for responsive websites.....
+  @media screen and (max-width: 500px){
+
+    .container{
+          grid-gap: 5rem;
+      float: left;
+      margin-top: -200px;
+      height: 300px;
+      width: 500px;
+      margin-left: 150px;
+      color:red;
+
+
+      }
+
+    .wave{
+      display: none;
+    }
+
+    .img1{
+
+      margin-top: 200px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 1050px){
+      .container{
+          grid-gap: 5rem;
+      float: right;
+      margin-top: -200px;
+      height: 600px;
+      width: 500px;
+      margin-left: 50px;
+
+      }
+
+    .img1{
+      height: 550px;
+      width: 450px;
+      margin: 350px 0 0 -100px;
+    }
+
+    .wave{
+      display: none;
+    }
+
+
+  }
+
+
